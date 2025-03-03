@@ -1,0 +1,142 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 25% 7%;
+    --foreground: 210 20% 98%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 175 100% 65%;
+    --primary-foreground: 215 25% 7%;
+
+    --secondary: 210 80% 60%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 210 20% 80%;
+
+    --accent: 250 100% 70%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 100% 68%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 25% 15%;
+    --input: 215 25% 15%;
+    --ring: 175 100% 70%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 25% 9%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 175 100% 65%;
+    --sidebar-primary-foreground: 215 25% 7%;
+    --sidebar-accent: 215 25% 15%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 215 25% 15%;
+    --sidebar-ring: 175 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-dark text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .cyber-card {
+    @apply relative bg-card/60 backdrop-blur-md border border-cyber-teal/30 rounded-md p-5 transition-all duration-300 hover:shadow-glow-teal hover:border-cyber-teal/50;
+  }
+  
+  .cyber-panel {
+    @apply relative bg-cyber-dark-blue/80 backdrop-blur-md border border-cyber-teal/20 rounded-md shadow-md;
+  }
+  
+  .cyber-text-gradient {
+    @apply bg-gradient-to-r from-cyber-teal to-cyber-blue bg-clip-text text-transparent;
+  }
+  
+  .cyber-button {
+    @apply px-4 py-2 bg-gradient-to-r from-cyber-teal/20 to-cyber-blue/20 hover:from-cyber-teal/30 hover:to-cyber-blue/30 border border-cyber-teal/50 rounded-md transition-all duration-300 hover:shadow-glow-teal font-medium;
+  }
+  
+  .cyber-input {
+    @apply block w-full bg-cyber-dark-blue/60 border border-cyber-teal/30 rounded-md px-4 py-2 focus:outline-none focus:ring-1 focus:ring-cyber-teal/50 focus:border-cyber-teal/50 placeholder:text-muted-foreground;
+  }
+  
+  .cyber-grid-bg {
+    @apply bg-cyber-grid bg-cyber-grid;
+  }
+  
+  .cyber-scrollbar {
+    @apply overflow-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glassmorphism {
+    @apply bg-black/20 backdrop-blur-lg border border-white/10;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  /* Custom scrollbar styles */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-track-cyber-dark-blue::-webkit-scrollbar-track {
+    background-color: hsl(220, 25%, 9%);
+  }
+  
+  .scrollbar-thumb-cyber-teal\/30::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 255, 238, 0.3);
+    border-radius: 0.25rem;
+  }
+  
+  .hover\:scrollbar-thumb-cyber-teal\/50:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(82, 255, 238, 0.5);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+  }
+}
