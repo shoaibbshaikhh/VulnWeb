@@ -16,16 +16,6 @@ VulnWeb is a intentionally vulnerable website made for security learners, develo
   - **User Authentication**: Experience common authentication mechanisms and their potential weaknesses.
 
 
-## Getting Started
-
-To set up VulnWeb locally, follow these steps:
-
-1. **Clone the Repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/VulnWeb.git
-   cd VulnWeb
-
 ## Installation
 
 To set up and run VulnWeb locally, follow these steps:
